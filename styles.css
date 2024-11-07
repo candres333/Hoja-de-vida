@@ -1,0 +1,107 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px; /* Asegura espacio en pantallas pequeñas */
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Hacemos que se adapte en pantallas pequeñas */
+  width: 90%; /* Aseguramos que no sobrepase la pantalla */
+  max-width: 1200px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 10px; /* Bordes redondeados */
+  overflow: hidden;
+}
+
+.left-section {
+  background-color: #1d1d1d;
+  color: white;
+  width: 35%; /* Ajustamos para que ocupe el espacio proporcional */
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Espacio entre elementos */
+}
+
+.profile-img img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.left-section h2 {
+  font-weight: 700;
+  border-bottom: 2px solid white;
+  padding-bottom: 5px;
+  width: 100%;
+  text-align: left;
+}
+
+.right-section {
+  width: 65%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.right-section h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.right-section h3 {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.right-section h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  border-bottom: 2px solid #000;
+  padding-bottom: 5px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills li {
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  list-style: none;
+}
+
+/* Adaptabilidad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Apilamos las secciones */
+  }
+
+  .left-section, .right-section {
+    width: 100%; /* Cada sección ocupa el 100% */
+  }
+}
